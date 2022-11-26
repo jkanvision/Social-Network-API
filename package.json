@@ -1,0 +1,16 @@
+{
+  "name": "social-network-api",
+  "version": "1.0.1",
+  "description": "Social Network API",
+  "main": "server.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node utils/seed"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^4.5.0",
+    "mongoose": "^6.0.13"
+  }
+}
