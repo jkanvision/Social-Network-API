@@ -30,7 +30,7 @@ const userController = {
 
     removeFriend(req, res) {
         // findOneAndUpdate using $pull
-    }
+    },
 };
 
 module.exports = userController;
