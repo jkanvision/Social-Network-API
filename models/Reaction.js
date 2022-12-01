@@ -4,8 +4,8 @@ const dateFormat = require("../utils/dateFormat");
 const reactionSchema = new Schema(
     {
         reactionId: {
-            _id: mongoose.ObjectId,
-            
+            type: Schema.Types.ObjectId,
+            default: () => new Types.ObjectId(),
         },
 
         reactionBody: {

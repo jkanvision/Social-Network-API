@@ -9,14 +9,15 @@ const userController = {
 
     getSingleUser(req, res) {
         User.findOne({ _id: req.params.userId })
+          .select('-__v')
+          .populate("friends", "thoughts")
           .then((user) =>
             !user
-              ? res.status(404).json({ message: 'No user found with that id' })
+              ? res.status(404).json({ message: "No user found with that id" })
               : res.json(user)
           )
           .catch((err) => res.status(500).json(err));
-        // use .populate to pop friends and thoughts for that User
-        // ex: .populate("friends")
+        
     },
 
     createUser(req, res) {
@@ -47,7 +48,7 @@ const userController = {
         User.findOneAndDelete({ _id: req.params.userId })
           .then((user) =>
               !user
-                ? res.status(404).json({ message: 'No user with that ID' })
+                ? res.status(404).json({ message: "No user found with that id" })
                 // BONUS: delete associated thoughts
                 : Thought.deleteMany({ _id: { $in: user.thoughts } })
           )
@@ -65,7 +66,7 @@ const userController = {
               !user
                 ? res
                     .status(404)
-                    .json({ message: 'No user found with that ID :(' })
+                    .json({ message: "No user found with that id" })
                 : res.json(user)
             )
             .catch((err) => res.status(500).json(err));
@@ -81,7 +82,7 @@ const userController = {
               !user
                 ? res
                     .status(404)
-                    .json({ message: 'No user found with that ID :(' })
+                    .json({ message: "No user found with that id" })
                 : res.json(user)
             )
             .catch((err) => res.status(500).json(err));
