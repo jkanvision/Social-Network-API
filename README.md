@@ -28,8 +28,20 @@
   2. This application runs on node.js. If you don't have it installed, download [Node.js](https://nodejs.org/en/) (version 16.18.0 LTE). It also requires access to MongoDB, which can be downloaded [here](https://www.mongodb.com/docs/manual/installation/)
 
   3. To install necessary dependencies, open the command line and run the following command:
+
+  &nbsp;
+  &nbsp;
   >           npm i
   
+  &nbsp;
+  &nbsp;
+
+  4. Run the following command to spin up your server:
+  
+  &nbsp;
+  &nbsp;
+  >          npm start
+  <br>
 
   &nbsp;
   &nbsp;
@@ -42,7 +54,7 @@
   &nbsp;
   Video Walkthrough:
 
-  [![Video walkthrough demonstrating the functionality of the application](images/walkthrough-scrnshot.png)](https://drive.google.com/file/d/1rN_Wgi-CyruV6yYZAOyjUCAe0oRhMqDj/view)
+  [![Video walkthrough demonstrating the functionality of the application]()]()
   
   &nbsp;
   &nbsp;
