@@ -24,6 +24,7 @@ const reactionSchema = new Schema(
             type: Date,
             default: Date.now,
             // getter to format time
+            get: timestamp => dateFormat(timestamp),
         },
     },
 

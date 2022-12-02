@@ -6,7 +6,7 @@ const thoughtSchema = new Schema(
     {
         thoughtText: {
             type: String,
-            reuired: true,
+            required: true,
             minLength: 1,
             maxLength: 280,
         },
@@ -14,6 +14,7 @@ const thoughtSchema = new Schema(
             type: Date,
             default: Date.now,
             // getter to format time
+            get: timestamp => dateFormat(timestamp),
         },
         username: {
             type: String,
